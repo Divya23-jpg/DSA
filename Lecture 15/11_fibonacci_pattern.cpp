@@ -12,14 +12,14 @@
 #include<iostream>
 using namespace std;
 
-int fibo(int n){
+int fibo(int g){
     //base case
-    if(n==0 || n==1){
-        return n;
+    if(g==0 || g==1){
+        return g;
     }
     else{
         //recursion
-        return fibo(n-1)+fibo(n-2);
+        return fibo(g-1)+fibo(g-2);
     }
 
 }
