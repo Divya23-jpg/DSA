@@ -13,7 +13,7 @@ int main(){
         
 
     }
-    cout<<"Decimal To Binary is ::"<< sum <<endl;
+    cout<<"Binary To Decimal is ::"<< sum <<endl;
     return 0;
 
     

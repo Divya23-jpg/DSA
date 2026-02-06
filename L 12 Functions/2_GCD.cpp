@@ -37,38 +37,39 @@ int main(){
 // } 
 //Euclidean algorithm
 
-// #include<iostream>
-// using namespace std;
-// int gcd(int a,int b){
-//     while(b!=0){
-//         int t=a%b;
-//         a=b;
-//         b=t;
-//     }
-//     cout<< a;
-
-// }
-// int main(){
-//    int a,b;
-//    cout<<"Enter 1st number::";
-
-//    cin>>a>>b;
-//     gcd(a,b);
-//     return 0;
-// }
-
-//
 #include<iostream>
-#include<algorithm>
 using namespace std;
+int gcd(int a,int b){
+    while(b!=0){
+        int t=a%b;
+        a=b;
+        b=t;
+        
+    }
+    cout<< a;
+
+}
 int main(){
    int a,b;
    cout<<"Enter 1st number::";
-   cin>>a;
-   cout<<"Enter 1st number::";
-   cin>>b;
-   cout<<__gcd(a,b);
-   
+
+   cin>>a>>b;
+    gcd(a,b);
     return 0;
 }
+
+
+// #include<iostream>
+// #include<algorithm>
+// using namespace std;
+// int main(){
+//    int a,b;
+//    cout<<"Enter 1st number::";
+//    cin>>a;
+//    cout<<"Enter 1st number::";
+//    cin>>b;
+//    cout<<__gcd(a,b);
+   
+//     return 0;
+// }
 
