@@ -67,7 +67,7 @@ int main(){
     }
     cout<<endl;
 
-    //reverer
+    //reverse
     cout<<"Reverse of avector::";
     reverse(a.begin(),a.end());
     for(int i=0;i<a.size();i++){
