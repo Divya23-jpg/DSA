@@ -13,17 +13,21 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-    int temp=n,rev=0,place=1;
-    while(temp>0){
-        int m=temp%10;
-        if(m==0){
-            m=5;
+    int ans=0,place=1;
+    while(n){
+        int k=n%10;
+        if(k==0){
+            k=5;
         }
-        rev=rev+m*place;
-        place=place*10;
-        temp=temp/10;
+        ans=ans+k*place;
+        place=place*10; 
+        n=n/10;
     }
-    cout<<rev;
+   
+    
+
+    cout<<ans;
+    return 0;
  
 }
 

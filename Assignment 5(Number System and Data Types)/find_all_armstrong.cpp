@@ -18,28 +18,33 @@ Write a function which prints all armstrong numbers between N1 and N2 (inclusive
 #include<iostream>
 #include<cmath>
 using namespace std;
+int armstrong(int n){
+    int sum=0;
+        int temp=n;
+        while(temp>0){
+
+            int k=temp%10;
+            sum=sum+k*k*k;
+            temp=temp/10;
+        }
+        if(sum==n){
+            cout<<n;
+        }
+        return sum;
+}
 int main(){
     int n,m;
     cin>>n>>m;
-    for(int i=n;i<=m;i++){
-        //total digits 
+      //calculate total digit in n
+      for(int i=n;i<=m;i++){
         int og=i,l=0;
+        
         while(og!=0){
             og=og/10;
             l++;
+        }
+        armstrong(i);
 
-        }
-        // pow to every digits by total digits and sum
-        int temp=i;
-        int sum=0;
-        while(temp!=0){
-            int k=temp%10;
-            sum=sum+pow(k,l);
-            temp=temp/10;   
-        }
-        if(i==sum){
-            cout<<i<<" ";
-        }
     }
     return 0;
 }
