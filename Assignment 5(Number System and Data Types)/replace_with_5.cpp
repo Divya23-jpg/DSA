@@ -11,9 +11,13 @@ Sample Output
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
+    long long n;
     cin>>n;
-    int ans=0,place=1;
+    long long ans=0,place=1;
+    if(n==0){
+        cout<<5<<endl;
+        return 0;
+    }
     while(n){
         int k=n%10;
         if(k==0){
@@ -23,9 +27,6 @@ int main(){
         place=place*10; 
         n=n/10;
     }
-   
-    
-
     cout<<ans;
     return 0;
  

@@ -13,6 +13,7 @@ Sample Output
 
 Yes
 No
+
 */
 
 #include<iostream>
