@@ -33,7 +33,6 @@ int reverse (int n){
 int  main(){
 
     int n,rev=1;
-    int a;
    
     cin>>n;
     int l=length(n);
