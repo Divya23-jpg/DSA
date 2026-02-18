@@ -47,9 +47,6 @@ bool ishappy(int n){
    return ishappy(sum);
     
 }
-
-
-
 using namespace std;
 int main(){
 
