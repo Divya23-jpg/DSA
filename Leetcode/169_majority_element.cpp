@@ -9,4 +9,20 @@ int main(){
     int n=nums.size();
     cout<<nums[n/2]; 
 
+
+
+      //frequency count
+        // int freq=0, ans=0;
+        // for(int i =0;i<nums.size();i++){
+        //     if(freq==0){
+        //         ans=nums[i];
+        //     }
+        //   if(ans==nums[i]){
+        //     freq++;
+        //   }
+        //   else{
+        //     freq--;
+        //   }
+        // }
+        // return ans;
 }
