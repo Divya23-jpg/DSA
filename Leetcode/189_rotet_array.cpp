@@ -15,13 +15,19 @@ rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
 
 */
-
- int n=nums.size();
-        k=k%n;
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using  namespace std;
+int main(){
+    vector <int> nums={};
+     int n=nums.size();
+        int k=k%n;
         //poora array reverse
         reverse(nums.begin(),nums.end());
         //left reverse
         reverse(nums.begin(),nums.begin()+k);
         //right reverse
         reverse(nums.begin()+k,nums.end());
-        return;
+       
+}
