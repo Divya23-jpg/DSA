@@ -2,17 +2,66 @@
 #include<vector>
 using namespace std;
 
-vector <int> megrge(vector <int> a,vector <int> b){
+ vector<int> merge(vector<int>& nums1, vector<int>& nums2){
+    vector<int> nums;
+    //merging two sorted lists to nums 
     int i=0;
     int j=0;
-    int m=a.size();
-    int n=b.size();
-    vector <int> nums;
-    while(i<m)
+
+    int n = nums1.size();
+    int m = nums2.size();
+
+    while(i<n && j<m){
+        if(nums1[i]<=nums2[j]){
+            nums.push_back(nums1[i]);
+            i++;
+        }
+        else if(nums1[i]>nums2[j]){
+            nums.push_back(nums2[j]);
+            j++;
+        }
+    }
+
+    while(i<n){
+        nums.push_back(nums1[i]);
+        i++;
+    }
+
+    while(j<m){
+        nums.push_back(nums2[j]);
+        j++;
+    }
+    for(int i=0;i<nums.size();i++){
+
+        cout<<nums[i];
+    }
 }
 
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    double median = 0;
+    vector<int> nums = merge(nums1,nums2);
+    int s = nums.size();
     
-   
+    //finding middle value then median
+    if(s%2!=0){
+        int mid = s/2;
+        median = nums[mid];
+    }
+    else{
+        int mid1 = s/2;
+        int mid2 = (s/2)-1;
+        median = (double)(nums[mid1] + nums[mid2])/2; //making ek operand double varna 2 ayega instead of 2.5, integer division and double division 
+    }
+
+    return median;
+}
+int main(){
+    vector<int> nums1={1,3};
+    vector<int> nums2={2};
+    merge( nums1, nums2);
+    cout<< findMedianSortedArrays(nums1,  nums2) ;
+     
+}
 
 
     
