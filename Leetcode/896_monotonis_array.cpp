@@ -3,14 +3,19 @@
 using namespace std;
 int main(){
     vector <int> nums={1,2,2,3};
-    int n=nums.size();
-    for(int i=0;i<nums.size();i++){
-        if((nums[i]<nums[i+1]) and(nums[n-1]<nums[n-2])){
-            cout<< "True";
+       bool inc;
+        bool dec;
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]>nums[i-1]){
+                dec=false;
+            }
+            else if(nums[i]<nums[i-1]){
+                inc=false;
+            }
+            if(!inc && !dec){
+                return false;
+            }
         }
-        else{
-            cout<<"false";
-        }
-    }
+        return true;
     // return 0;
 }
