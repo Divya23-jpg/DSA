@@ -4,8 +4,9 @@ using namespace std;
 int main(){
 
     
-    vector<vector<int>> generateMatrix(int n) {
-        vector<vector<int>> arr(n,vector<int>(n));
+    vector<vector<int>> generateMatrix(int n) 
+    {
+        vector<vector<int>> arr(n,vector<int>(n)){;
         int left=0,right=n-1,top=0;
         int bottom=n-1,val=1;
         while(left<=right and top<=bottom){
@@ -39,11 +40,12 @@ int main(){
             }
         }
         left++;
+        
         }
-    
+    }}
     return arr;
     }
-}
+
 
     
     
