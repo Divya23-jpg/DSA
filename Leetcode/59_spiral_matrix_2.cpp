@@ -5,20 +5,20 @@ int main(){
 
     
     vector<vector<int>> generateMatrix(int n){
-        
-        vector<vector<int>> arr(n,vector<int>(n)){;
+
+        vector<vector<int>> arr(n,vector<int>(n)){
         int left=0,right=n-1,top=0;
         int bottom=n-1,val=1;
         while(left<=right and top<=bottom){
         //left to right
-        for(int i=left;i<=right;i++){
+            for(int i=left;i<=right;i++){
             //top
             arr[top][i]=val;
             val++;
         }
         top++;
         //top to bottom
-        for(int i=top;i<=bottom;i++){
+            for(int i=top;i<=bottom;i++){
             //right
             arr[i][right]=val;
             val++;
@@ -41,12 +41,13 @@ int main(){
         }
         left++;
         
-        }
+}
     }
     return arr;
 }
-    
 }
+    
+
 
     
     
