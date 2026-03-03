@@ -8,7 +8,7 @@ int main(){
         cin>>a[i];
     }
   
-    for(int i=n;i>=0;i--){
+    for(int i=n;i>=1;i--){
         cout<<a[i];
     }
    
