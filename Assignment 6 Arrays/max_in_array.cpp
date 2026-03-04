@@ -14,19 +14,19 @@ Sample Output
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
+    int n,i=0;
     cin>>n;
     int a[n];
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-    int max=0;
+    int max=a[i];
     for(int i=0;i<n;i++){
-        if(max>a[i]){
+        if(max<a[i]){
             max=a[i];
-            max++;
+
         }
-        // cout<<max;
+       
         
     }
     cout<<max;
