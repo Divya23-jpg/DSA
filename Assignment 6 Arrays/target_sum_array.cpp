@@ -11,7 +11,7 @@ Sample Output
 1 and 4
 2 and 3
 
-*/
+// */
 #include<iostream>
 using namespace std;
 int main(){
@@ -26,15 +26,19 @@ int main(){
     cin>>target;
     for(int i=0;i<n;i++){
         for(int j=1;j<n;j++){
-            if(a[i]+a[j]==target){
+            if((a[i]+a[j]==target)and(a[i]<a[j])){
                 cout<<a[i]<<" and "<<a[j];
             }
         }
-        cout<<endl;
-       
         
-        
-
+    cout<<endl;
     }
     return 0;
 }
+
+
+
+
+  
+   
+
