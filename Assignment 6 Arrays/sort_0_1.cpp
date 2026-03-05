@@ -7,26 +7,22 @@ Sample Output
 0 0 0 1 1 1 1
 
 */
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
-    int n;
-    cin>>n;
-    int a[n];
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-    }
-    for(int i=0;i<n;i++){
-        for(int j=1;j<n;j++){
-            if((a[i]==0)and(a[j]==1)){
-                swap(a[i],a[j]);
 
-            }
-            
-        }
+int main() {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    int count0 = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        if (arr[i] == 0) count0++;
     }
-    for(int i=0;i<n;i++){
-        cout<<a[i];
-    }
+    // Print all 0s first
+    for (int i = 0; i < count0; i++) cout << 0 << " ";
+    // Then all 1s
+    for (int i = count0; i < n; i++) cout << 1 << " ";
     return 0;
 }
