@@ -28,22 +28,19 @@ int main(){
             if(a[j]>a[j+1]){
                
                 swap(a[j],a[j+1]);
-
-
             }
         }
     }
-     for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){
          for(int j=i+1;j<n;j++){
             for(int k=j+1;k<n;k++){
-                if((a[i]+a[j]+a[k]==target)and(a[i] < a[j] && a[j] < a[k])){
+                if((a[i]+a[j]+a[k]==target)and(a[i] < a[j] and a[j] < a[k])){
                     cout<<a[i]<<", "<<a[j]<<" and "<<a[k];
             }
         }
         
         cout<<endl;
     }
-        
     }
     return 0;
 }
