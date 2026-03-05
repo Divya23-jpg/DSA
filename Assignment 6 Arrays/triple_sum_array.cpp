@@ -23,26 +23,26 @@ int main(){
 
     int target;
     cin>>target;
-    // for(int i=0;i<n-1;i++){
-    //     for(int j=0;j<n-i-1;j++){
-    //         if(a[j]>a[j+1]){
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(a[j]>a[j+1]){
                
-    //             swap(a[j],a[j+1]);
+                swap(a[j],a[j+1]);
 
 
-    //         }
-    //     }
-    // }
+            }
+        }
+    }
      for(int i=0;i<n;i++){
-         for(int j=1;j<n;j++){
-            for(int k=2;k<n;k++){
-                if((a[i]+a[j]+a[k]==target)and(a[i]<a[j]<a[k])){
+         for(int j=i+1;j<n;j++){
+            for(int k=j+1;k<n;k++){
+                if((a[i]+a[j]+a[k]==target)and(a[i] < a[j] && a[j] < a[k])){
                     cout<<a[i]<<", "<<a[j]<<" and "<<a[k];
             }
         }
         
+        cout<<endl;
     }
-    cout<<endl;
         
     }
     return 0;
