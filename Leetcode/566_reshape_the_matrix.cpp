@@ -24,5 +24,5 @@
     }
 
 int main(){
-    vector
+ matrixReshape()
 }
