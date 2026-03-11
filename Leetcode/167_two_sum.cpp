@@ -21,7 +21,7 @@ int main(){
     int target;
     cin>>target;
    
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n-1;i++){
         if(numbers[i]+numbers[i+1]==target){
             ans.push_back(i);
             ans.push_back(i+1);
@@ -29,7 +29,7 @@ int main(){
       
     }
    
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n-1;i++){
         cout<<ans[i]<<" ";
     }
     
