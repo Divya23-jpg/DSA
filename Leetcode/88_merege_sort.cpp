@@ -16,7 +16,9 @@ int main(){
     int m=3;
     vector<int> nums2={2,5,6};
     int n=3;
-    nums=nums+nums2;
+    for(int i=0;i<m+n;i++){
+        
+    }
 
 
 

@@ -10,28 +10,50 @@ Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We retu
 #include<iostream>
 #include<vector>
 using namespace std; 
+
+   vector<int> twoSum(vector<int>& numbers, int target) {
+    
+    int start=0;
+    int end=numbers.size()-1;
+ 
+    while(start<end){
+        if(numbers[start]+numbers[end]==target){
+            return {start+1 , end+1};
+        
+
+        }
+        else if(numbers[start]+numbers[end]<target){
+            start++;
+
+        }
+        else if(numbers[start]+numbers[end]>target){
+            end--;
+
+        }
+        
+        
+    }
+    return {};
+        
+        
+    }
 int main(){
     vector <int> numbers={2,7,11,15,18};
-    vector <int> ans;
-    int n=numbers.size();
+    int target=9;
+    vector <int> result=twoSum(numbers,target);
+     if (!result.empty()) {
+        cout << "Indices: " << result[0] << " and " << result[1] << endl;
+    } else {
+        cout << "No solution found." << endl;
+    }
 
-    // for(int i=0;i<n;i++){
-    //     cout<<numbers[i];
-    // }
-    int target;
-    cin>>target;
+    return 0;
+
+    
    
-    for(int i=0;i<n-1;i++){
-        if(numbers[i]+numbers[i+1]==target){
-            ans.push_back(i);
-            ans.push_back(i+1);
-        }
-      
-    }
-   
-    for(int i=0;i<n-1;i++){
-        cout<<ans[i]<<" ";
-    }
+
+
+    
     
     
   
