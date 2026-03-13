@@ -10,12 +10,9 @@ in built function add krne k liye #include<string>
 using  namespace std;
 int main(){
 
-    string s={"Hello I am Divya"}; //string "  ", charachter ' '
-    cout<<s.size();
-    //traversal
-    // for(int i=0;i<name.size();i++){
-    //     cout<<name[i];
-    // }
+    string s="Hello";
+    string s2="world";
+    
     cout<<s.length();
     return 0;
 
