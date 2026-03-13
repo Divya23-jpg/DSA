@@ -11,13 +11,33 @@ Output: "blue is sky the"
 using namespace std;
 int main(){
     string s =  "the sky is blue";
-    string p=" ";
-    for(int i=s.size()-1;i>=0;i++){
-        p.append("s[i]");
+   string ans="";
+    string p="";
+    for(int i=s.size()-1;i>=0;i--){
+        if(s[i]==' ' and p.empty()){
+            continue;
+        }
+        if(s[i]!=' '){
+            p.push_back(s[i]);
+        }
+        if(s[i]==' ' and !p.empty()){
+            reverse(p.begin(),p.end());
+            ans.append(p);
+            p.clear();
+            ans.push_back(' ');
+        }
     }
-
-    for(int i=0;i<p.size();i++){
-        cout<<p[i];
+    if(!p.empty()){
+        reverse(p.begin(),p.end());
+        ans.append(p);
+        p.clear();
     }
+    if(ans[ans.size()-1]==' '){
+        ans.pop_back();
+    }
+    for(int i=0;i<ans.size();i++){
+        cout<<ans[i]<<" ";
+    }
+    
         
 }
