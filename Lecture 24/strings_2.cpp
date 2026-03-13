@@ -17,4 +17,6 @@ int main(){
         cout<<name[i];
     }
     return 0;
+
+    
 }
