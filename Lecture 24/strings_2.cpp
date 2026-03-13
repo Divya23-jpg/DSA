@@ -10,7 +10,7 @@ with whitespacing
 using  namespace std;
 int main(){
 
-    string name={"Divya"}; //string "  ", charachter ' '
+    string name={"Hello I am Divya"}; //string "  ", charachter ' '
 
     //traversal
     for(int i=0;i<name.size();i++){
