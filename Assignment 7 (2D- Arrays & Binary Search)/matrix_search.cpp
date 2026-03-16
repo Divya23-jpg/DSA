@@ -14,11 +14,11 @@ int main(){
     }
     int key;
     cin>>key;
-    int found=0;
+    int found;
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             if(mat[i][j]==key){
-                found++;
+                found=1;
                 
             }
             else{
