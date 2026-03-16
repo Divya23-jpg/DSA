@@ -27,11 +27,19 @@ int main(){
         }
     }
     //output
+    int k=0;
     for(int i=0;i<n;i++){
         for(int j=n-1;j>=0;j--){
-            cout<<mat[j][i]<<",";
+            // cout<<mat[j][i]<<",";
+            if(i%2==0){
+                cout<<mat[i][k];
+                k++;
+            }
+            else{
+                cout<<mat[i][j];
+            }
         }
-        
+        k=0;
     }
     cout<<"END";
    
