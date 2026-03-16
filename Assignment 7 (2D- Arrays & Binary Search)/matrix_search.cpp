@@ -27,10 +27,10 @@ int main(){
         }
     }
     if(found==1){
-        cout<<"1";
+        cout<<1;
     }
     else{
-         cout<<"0";
+         cout<<0;
 
     }
     return 0;
