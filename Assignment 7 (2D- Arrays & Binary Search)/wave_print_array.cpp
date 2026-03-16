@@ -15,22 +15,23 @@
 using namespace std;
 int main(){
     int n ;
+    int m;
+    cin>>n>>m;
     
-    cin>>n;
-    int mat[n][n];
+    int mat[n][m];
    
     //input
     for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
+        for(int j=0;j<m;j++){
             cin>>mat[i][j];
         }
     }
     //output
     for(int i=0;i<n;i++){
         for(int j=n-1;j>=0;j--){
-            cout<<mat[i][j]<<",";
+            cout<<mat[j][i]<<",";
         }
-        // cout<<endl;/
+        
     }
     cout<<"END";
    
