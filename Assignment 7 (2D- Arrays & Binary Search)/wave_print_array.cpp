@@ -10,38 +10,39 @@
 */
 
 
-
 #include<iostream>
+#include <vector>
 using namespace std;
-int main(){
-    int n ;
-    int m;
-    cin>>n>>m;
-    
-    int mat[n][m];
-   
-    //input
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
-            cin>>mat[i][j];
+
+int main() {
+    int M, N;
+    cin >> M >> N;
+
+    // Use vector for dynamic 2D array
+    vector<vector<int>> mat(M, vector<int>(N));
+
+    // Input
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> mat[i][j];
         }
     }
-    //output
-    int k=0;
-    for(int i=0;i<n;i++){
-        for(int j=n-1;j>=0;j--){
-            // cout<<mat[j][i]<<",";
-            if(i%2==0){
-                cout<<mat[i][k];
-                k++;
+
+    // Output: Wave Print Row Wise
+    for (int i = 0; i < M; i++) {
+        if (i % 2 == 0) {
+            // Left to Right
+            for (int j = 0; j < N; j++) {
+                cout << mat[i][j] << ", ";
             }
-            else{
-                cout<<mat[i][j];
+        } else {
+            // Right to Left
+            for (int j = N - 1; j >= 0; j--) {
+                cout << mat[i][j] << ", ";
             }
         }
-        k=0;
     }
-    cout<<"END";
-   
-  
+    cout<< "END";
+
+    return 0;
 }
