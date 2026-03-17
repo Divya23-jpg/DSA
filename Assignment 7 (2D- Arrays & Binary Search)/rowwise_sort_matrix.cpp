@@ -5,12 +5,17 @@ using namespace std;
 
 void searchMatrix(vector<vector<int>>& mat, int n,int m) {
 
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
-            sort(mat.begin(),mat.end());
-            cout<<mat[i][j];
+ for (int i = 0; i < n; i++) {
+        // Sort each row
+        sort(mat[i].begin(), mat[i].end());
+
+        // Print the sorted row
+        for (int j = 0; j < m; j++) {
+            cout << mat[i][j] << " ";
         }
+        cout << endl;
     }
+
         
 }
 
@@ -25,11 +30,8 @@ int main(){
             cin>>mat[i][j];
         }
     }
-    int target;
-    cin>>target;
-    (searchMatrix(mat,n,m));
-   
   
-
+    searchMatrix(mat,n,m);
+   
     return 0;
 }
