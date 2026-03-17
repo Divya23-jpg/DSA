@@ -16,38 +16,34 @@ void matrix(int mat[][100],int n){
 
 
 //colum wise max find
-int  colSum(int mat[][100],int n){
+void  colSum(int mat[][100],int n){
     int sum=INT_MIN;
+    int colIndex = -1;
+
     for(int i=0;i<n;i++){
         int csum=0;
         for(int j=0;j<n;j++){
             csum +=mat[j][i];
-          
-            
         }
-        sum=max(sum,csum);
-        
-      
+        if(csum > sum) {
+            sum = csum;
+            colIndex = i;  // store column index
+        }
     }
-    return  sum;
-
+    cout<<colIndex+1<<"   "<<sum;
 }
-
-
 
 int main(){
    
     int n;
-    int m;
-    cin>>n>>m;
+    cin>>n;
     int mat[100][100];
     for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
+        for(int j=0;j<n;j++){
             cin>>mat[i][j];
         }
     }
     
- 
-    cout<<colSum(mat,n,m)<<endl;
+    colSum(mat,n);
     return 0;
 }
