@@ -20,13 +20,13 @@ return sum;
 }
 int main(){
    int n;
-   cin>>n;
-   int mat[n][n];
-   for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
-        cin>>mat[i][j];
+    cin>>n;
+    int mat[100][100];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cin>>mat[i][j];
+        }
     }
-   }
    for(int i=0;i<n;i++){
     for(int j=0;j<n;j++){
         cout<<mat[i][j]<<" ";
