@@ -5,9 +5,9 @@ using namespace std;
 
 
 
-void matrix(int mat[][100],int n,int m){
+void matrix(int mat[][100],int n){
     for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
+        for(int j=0;j<n;j++){
             cout<<mat[i][j]<<" ";
         }
         cout<<endl;
@@ -16,11 +16,11 @@ void matrix(int mat[][100],int n,int m){
 
 
 //colum wise max find
-int  colSum(int mat[][100],int n,int m){
+int  colSum(int mat[][100],int n){
     int sum=INT_MIN;
     for(int i=0;i<n;i++){
         int csum=0;
-        for(int j=0;j<m;j++){
+        for(int j=0;j<n;j++){
             csum +=mat[j][i];
           
             
@@ -46,7 +46,7 @@ int main(){
             cin>>mat[i][j];
         }
     }
-    // matrix(mat,n,m);
+    
  
     cout<<colSum(mat,n,m)<<endl;
     return 0;
