@@ -25,7 +25,7 @@ bool searchMatrix(vector<vector<int>>& mat, int target) {
 
         }
         return false;
-    }
+}
 
 
 int main(){

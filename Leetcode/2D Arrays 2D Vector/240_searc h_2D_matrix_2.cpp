@@ -1,8 +1,10 @@
 #include<iostream>
 #include<vector>
- bool searchMatrix(vector<vector<int>>& mat, int target) {
-    if(mat.empty() || mat[0].empty()) return false; 
-    int m=mat.size(),n=mat[0].size();
+using namespace std;
+
+
+bool searchMatrix(vector<vector<int>>& mat, int target) {
+       int m=mat.size(),n=mat[0].size();
     int r=0,c=n-1;
     while(r<m && c>=0){
         if(target==mat[r][c]){
@@ -17,8 +19,8 @@
 
     }
     return false;
-        
-    }
+}
+
 int main(){
     int n, m;
     cin >> n >> m;
