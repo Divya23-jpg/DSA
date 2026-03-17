@@ -10,14 +10,7 @@ int diagonalSum(int mat[][100],int n){//O(n*n)
         }
        
 
-    // for(int j=0;j<n;j++){
-    //     if(i==j){
-    //         sum += mat[i][j];
-    //     }
-    //     else if(j==n-i-1){
-    //         sum += mat[i][j];
-    //     }
-    // }
+  
 }
 return sum;
 
