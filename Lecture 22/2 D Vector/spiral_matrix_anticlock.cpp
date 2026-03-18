@@ -1,5 +1,5 @@
 /*
-
+4 4
 11 12 13 14
 21 22 23 24
 31 32 33 34
@@ -27,36 +27,37 @@ int main() {
 
     int srow = 0, erow = n - 1;
     int scol = 0, ecol = m - 1;
+while(srow <= erow && scol <= ecol) {
+    // left boundary
+    for(int i = srow; i <= erow; i++){
+        cout << mat[i][scol] << ", ";
+    }
 
-    while(srow <= erow && scol <= ecol) {
-        //top
-        for(int j = scol; j <= ecol; j++){
-            cout << mat[srow][j] << ", ";
-        }
-        //right
-        for(int i = srow + 1; i <= erow; i++){
+    // bottom boundary
+    for(int j = scol + 1; j <= ecol; j++){
+        cout << mat[erow][j] << ", ";
+    }
+
+    // right boundary
+    if(scol < ecol){
+        for(int i = erow - 1; i >= srow; i--){
             cout << mat[i][ecol] << ", ";
         }
-        //bottom
-        if(srow < erow){
-            for(int j = ecol - 1; j >= scol; j--){
-                cout << mat[erow][j] << ", ";
-            }
-        }
-        //left
-        if(scol < ecol){
-            for(int i = erow - 1; i > srow; i--){
-                cout << mat[i][scol] << ", ";
-
-            }
-        }
-        
-        srow++;
-        erow--;
-        scol++;
-        ecol--;
     }
-    cout<<"END";
+
+    // top boundary
+    if(srow < erow){
+        for(int j = ecol - 1; j > scol; j--){
+            cout << mat[srow][j] << ", ";
+        }
+    }
+
+    srow++;
+    erow--;
+    scol++;
+    ecol--;
+}
+cout << "END";
 
     return 0;
 }
