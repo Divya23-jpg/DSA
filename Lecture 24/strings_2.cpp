@@ -31,7 +31,8 @@ int main(){
     cout<<n;
 
     //output with whitespace
-    string s;
+    string s; //dynamic in nature
+    char arr[]={'hy'}; // static in nature
     getline(cin,s);
     cout<<s<<" ";
     // return 0;
