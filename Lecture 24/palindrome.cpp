@@ -4,24 +4,26 @@
 #include<algorithm>
 using  namespace std;
 
-bool isAlpha(char ch){
-    if((ch>='0' && ch<='9') or 
-    (tolower(ch)>= 'a' && tolower(ch)<='z')){
-        return true;
-    }
-    return false;
+
+//user buil function
+// bool isAlpha(char ch){
+//     if((ch>='0' && ch<='9') or 
+//     (tolower(ch)>= 'a' && tolower(ch)<='z')){
+//         return true;
+//     }
+//     return false;
     
-}
+// }
 
 bool palindrome(string s){
     int st=0;
     int end=s.length()-1;
     while(st<end){
-        if (!isAlpha(s[st])){
+        if (!isalnum(s[st])){ //built in function
             st++;
             continue;
         }
-        if (!isAlpha(s[end])){
+        if (!isalnum(s[end])){
             end--;
             continue;
         }
