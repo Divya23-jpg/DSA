@@ -11,9 +11,9 @@ int main(){
 
     //reverse on char arr[]
     char s[]={'h','e','l','o'};
-    int n=s.length();
+    // int n=s.length();
 
-    int st=0,e=n-1;
+    // int st=0,e=n-1;
 
 
 
