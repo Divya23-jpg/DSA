@@ -1,12 +1,17 @@
 #include<iostream>
 #include<string>
+#include <cctype>
+
 using namespace std;
 int main(){
-    string str="IAmACompetitiveProgrammer";
-    for(int i=0;i<str.length();i++){
-        if(str[i]==){
-            cout<<endl;
-        }
+    string s="IAmACompetitiveProgrammer";
+    string currs="";
+    for(char ch:s){
+        
 
     }
+    
+
+
+   
 }
