@@ -9,14 +9,26 @@ int main(){
     for(char ch:s){
         if(isupper(ch)){
             if(!currs.empty()){
-                currs+=ch;
-                
+                cout << currs << endl;
+
+                currs="";
             }
+            currs+=ch;
+        }
+        else{
+            currs+=ch;
+
         }
 
 
     }
-    
+    //  if (!currs.empty()) {
+    //     cout << currs << endl;
+    // }
+       cout << currs << endl;
+
+    return 0;
+
 
 
    
