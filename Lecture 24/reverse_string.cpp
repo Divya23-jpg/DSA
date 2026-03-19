@@ -10,16 +10,16 @@ int main(){
     // }
 
     //reverse on char arr[]
-    // char s[]={'h','e','l','o'};
-    // int n=s.size();
+    char s[]={'h','e','l','o'};
+    int n=s.length();
 
-    // int st=0,e=n-1;
+    int st=0,e=n-1;
 
 
 
     //reverse on string
-    string st="Divya";
-    reverse(st.begin(),st.end());  //return iterator
-    cout<<st<<endl;
+    // string st="Divya";
+    // reverse(st.begin(),st.end());  //return iterator
+    // cout<<st<<endl;
 
 }
