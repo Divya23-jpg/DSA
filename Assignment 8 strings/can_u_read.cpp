@@ -4,7 +4,8 @@
 
 using namespace std;
 int main(){
-    string s="IAmACompetitiveProgrammer";
+    string s;
+    cin >> s; 
     string currs="";
     for(char ch:s){
         if(isupper(ch)){
@@ -22,10 +23,9 @@ int main(){
 
 
     }
-    //  if (!currs.empty()) {
-    //     cout << currs << endl;
-    // }
-       cout << currs << endl;
+     if (!currs.empty()) {
+    cout << currs << endl;
+    }
 
     return 0;
 
