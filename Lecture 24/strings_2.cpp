@@ -12,7 +12,8 @@ using  namespace std;
 int main(){
     char st[]={'a','b','c','\0'};//due to \0 it created string from char
     cout<<st; //string literal which value cant be change
-
+    cout<<st[1]<<endl; //indexing starts from 0
+    // if no charachter present then gives null
 
     // string name={"Hello I am Divya"}; //string "  ", charachter ' '
 
