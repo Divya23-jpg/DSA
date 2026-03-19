@@ -7,8 +7,13 @@ with whitespacing
 
 #include<iostream>
 #include<vector>
+#include<string>
 using  namespace std;
 int main(){
+    char st[]={'a','b','c','\0'};//due to \0 it created string from char
+    cout<<st; //string literal which value cant be change
+
+
     // string name={"Hello I am Divya"}; //string "  ", charachter ' '
 
     // //traversal
@@ -19,15 +24,15 @@ int main(){
 
 
     //input from user
-    string n;
-    cin>>n;
-    cout<<n;
+    // string n;
+    // cin>>n;
+    // cout<<n;
 
-    //output with whitespace
-    string s;
-    getline(cin,s);
-    cout<<s<<" ";
-    return 0;
+    // //output with whitespace
+    // string s;
+    // getline(cin,s);
+    // cout<<s<<" ";
+    // return 0;
 
     
 }
