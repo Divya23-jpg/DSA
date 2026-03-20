@@ -1,29 +1,25 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
-using  namespace std;
-int main(){
-    vector <int> nums={1,2,3,5};
-    int n=nums.size();
-    for(int i=0;i<n;i++){
-        int a=1; 
-        int st=0; int next=st+1;
-        if(nums[0]>=a){
-            st++;
+#include <iostream>
+using namespace std;
 
+int main() {
+    int arr[] = {1, 2, 3, 5};  // sequence with missing number
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-        }
-        else{
-            if(nums[i]==a+1){
-                next++;
+    // Formula: sum of first n natural numbers
+    int total = (arr[n-1] * (arr[n-1] + 1)) / 2;
 
-            }
-            else{
-                cout<<a+1;
-            }
-        }
-
-
+    // Sum of given array
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
     }
 
+    cout << "Missing number is: " << total - sum << endl;
+
+    return 0;
 }
+
+
+
+    
+
