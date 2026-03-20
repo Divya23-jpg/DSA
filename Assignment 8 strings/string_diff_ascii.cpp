@@ -15,12 +15,8 @@ int main(){
     string s;
     int minus=0;
     cin>>s;
-    for(int i=0;i<s.length();i++){
-        static_cast<int>(s[i]);//converts the character into its integer ASCII code.
-        minus=s[i+1]-s[i];
-        cout<<s[i];
-        
-        
-    }
+    string word="";
+   
+   
     return 0;
 }
