@@ -20,14 +20,19 @@ rotate 3 steps to the right: [5,6,7,1,2,3,4]
 #include<vector>
 using  namespace std;
 int main(){
-    vector <int> nums={};
+    vector <int> nums={1,2,3,4,5,6,7};
      int n=nums.size();
-        int k=k%n;
+     int k=3;
+         k=k%n;
         //poora array reverse
         reverse(nums.begin(),nums.end());
         //left reverse
         reverse(nums.begin(),nums.begin()+k);
         //right reverse
         reverse(nums.begin()+k,nums.end());
-       
+        for(int x : nums) {
+            cout << x << " ";
+        }
+        cout << endl;
+
 }
