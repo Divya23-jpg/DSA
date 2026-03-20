@@ -22,10 +22,14 @@ int fibo(int n){
 int main(){
     int n;
     cin>>n;
-    //total of fibonacci
+    // total of fibonacci
     cout<<fibo(n)<<endl;
     //print fibonacci series
     for(int i=0;i<=n;i++){
+        cout<<fibo(i)<<" "<<endl;
+    }
+    //first five fibonacci
+    for(int i=0;i<5;i++){
         cout<<fibo(i)<<" ";
     }
     return 0;
