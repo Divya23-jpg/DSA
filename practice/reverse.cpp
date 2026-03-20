@@ -31,8 +31,8 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-//    reverse(a,n);
-swap(a,n);
+    reverse(a,n);// Reverse loop → only prints in reverse, doesn’t change the array.
+    swap(a,n);   //  Swap method → actually reverses the array in memory.
 
   
 }
