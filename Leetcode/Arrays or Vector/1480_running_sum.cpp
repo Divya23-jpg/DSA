@@ -7,14 +7,31 @@ Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].*/
 #include<iostream>
 #include<vector>
 using namespace std;
-int main(){
-    vector <int> nums={1,2,3,4};
+vector<int> runningSum(vector<int>& nums) {
     int n=nums.size();
-    int sum=0;
-    for(int i=0;i<n;i++){
+    for(int i=1;i<n;i++){
         nums[i]=nums[i]+nums[i-1];
 
     }
+
+    return nums;
+        
+}
+
+int main(){
+    vector <int> nums={1,2,3,4};
+    vector<int> result = runningSum(nums);
+
+    // print the result to verify
+    for (int x : result) {
+        cout << x << " ";
+    }
+    return 0;
+
     
+
+   
+
+
    
 }
