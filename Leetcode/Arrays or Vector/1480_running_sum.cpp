@@ -15,5 +15,6 @@ int main(){
         nums[i]=nums[i]+nums[i-1];
 
     }
+    
    
 }
