@@ -1,0 +1,7 @@
+/*
+Sample Input
+abcg
+Sample Output
+badf
+
+*/
