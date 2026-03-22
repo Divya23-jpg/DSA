@@ -56,7 +56,7 @@ int main(){
         }
         cout<<endl;
     }
-    //find max wealth
+    //find max
     int max=0;
     for(int i=0;i<n;i++){
         int wealth=0;

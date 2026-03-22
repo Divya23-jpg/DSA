@@ -13,14 +13,9 @@ using namespace std;
 int main(){
     string s="cbaeicde";
     int n=s.length();
-    string pass="aeiou";
-  
-    while(n>0){
-        
+    
 
-        n--;
-    }
-    cout<<s.find(pass);
+
    
     
 
