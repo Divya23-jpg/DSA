@@ -1,0 +1,5 @@
+/*
+Sample Input
+aaabacB
+Sample Output
+a*/
