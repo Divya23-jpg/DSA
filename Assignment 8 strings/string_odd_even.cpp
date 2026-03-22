@@ -13,12 +13,12 @@ int main(){
     string s;
     cin>>s;
    for(int i=0;i<s.size();i++){
-    int asc=int(s[i]);
-    if(asc%2==0){
-        s[i]=asc-1;
+    // int asc=int(s[i]);
+    if(i%2==0){
+        s[i]=s[i]+1;
     }
     else{
-        s[i]=asc+1;
+        s[i]=s[i]-1;
     }
    }
    for(int i=0;i<s.size();i++){
