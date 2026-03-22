@@ -16,6 +16,7 @@ note: i != j!=k
 using namespace std;
 int main(){
     vector<int>v={1,0,1,2,-1,-4};
+   vector<vector<int>> ans;
     sort(v.begin(),v.end());
     int n=v.size();
 
@@ -32,11 +33,24 @@ int main(){
             else if(sum>0){
                 k--;
             }
+            else{
+                ans.push_back({v[i], v[j], v[k]});
+                j++;k--;
+
+                while(j<k && v[j]==v[j-1]){
+                    j++;
+                }
+            }
 
         }
-        while(j<k && v[j]==v[j-1]){
-            j++;
-        }
     }
+    //we use 2 nested loop because its vector of vector
+   for (int i = 0; i < ans.size(); i++) {
+    for (int j = 0; j < ans[i].size(); j++) {
+        cout << ans[i][j] << " ";
+    }
+    cout << endl;
+}
+
    
 }
