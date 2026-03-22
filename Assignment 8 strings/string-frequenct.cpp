@@ -2,43 +2,37 @@
 Sample Input
 aaabacB
 Sample Output
-a*/
-// #include<iostream>
-// #include<string>
-
-// using namespace std;
-// int main(){
-//     string s;
-//     cin>>s;
-//     int fre=0;
-//     for(int i=0;i<s.size()/2;i++){
-//         for(int j=0;j<s.size();j++){
-
-//             if(s[i]==s[j]){
-//                 fre++;
-//             }
-//         }
-
-//         cout<<fre;
-//     }
-// }
-
+a
+*/
 #include <iostream>
 #include <string>
-#include <unordered_map>
 using namespace std;
 
 int main() {
     string s;
     cin >> s;
 
-    unordered_map<char,int> freq;
+    char mostFreqChar = s[0];
+    int maxCount = 0;
 
-    // Count frequencies
-    for(char c : s) {
-        freq[c]++;
+    // For each character in the string
+    for (int i = 0; i < s.size(); i++) {
+        int count = 0;
+
+        // Count how many times s[i] appears
+        for (int j = 0; j < s.size(); j++) {
+            if (s[i] == s[j]) {
+                count++;
+            }
+        }
+
+        // Update if this character appears more
+        if (count > maxCount) {
+            maxCount = count;
+            mostFreqChar = s[i];
+        }
     }
 
-    // Print each character with its frequency
-    cout<<freq;
+    cout << mostFreqChar << endl;
+    return 0;
 }

@@ -12,19 +12,28 @@ using namespace std;
 
 int main() {
     string s;
-    cin>>s;
-    for(int i=0;i<s.size();){
-        char curr=s[i];
-        int count=0;
-        while(i<s.size() && s[i]==curr){
+    cin >> s;
+
+    int n = s.size();
+
+    for (int i = 0; i < n; ) {
+        char current = s[i];
+        int count = 0;
+
+        // Count consecutive occurrences of current character
+        while (i < n && s[i] == current) {
             count++;
             i++;
-            
         }
-        cout<<curr<<count;
+
+        // Print character
+        cout << current;
+
+        // Print count only if more than 1
+        if (count > 1) {
+            cout << count;
+        }
     }
-
-
 
     return 0;
 }
