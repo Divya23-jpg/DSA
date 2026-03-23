@@ -5,7 +5,9 @@ int main(){
     int n;
     cin>>n;
 
-    vector<int> v;
+    vector<int> v(n,7); // inzializing n size by same number 7
+    vector<int> v; 
+
     for(int i=0;i<n;i++){
         int x;
         cin >> x;
@@ -16,8 +18,9 @@ int main(){
     int st=0;
     int end=v.size()-1;
     int found=0;
-    while(st<=end){
+    while(st<end){
         int mid=end/2;
+        // int mid=st+(end-st)/2; one more to find mid
         if(v[mid]==target){
             cout<<"target position is::"<<mid;
             found++;
