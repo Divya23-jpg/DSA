@@ -1,6 +1,6 @@
 /*
 Sample Input
-acb
+aaaccbddd
 Sample Output
 a2c-1b
 */

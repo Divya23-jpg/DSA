@@ -11,25 +11,23 @@ void reverseArray(vector<int>& v, int start, int end) {
     }
 }
 
-void rotate(vector<int>& v, int k) {
-    
-}
+
 
 int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n);
+    int p;
+    cin >> p;
+    vector<int> v(p);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < p; i++) {
         cin >> v[i];
     }
 
     int k;
     cin >> k;
 
-    rotate(v, k);
+    // rotate(v, k);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < p; i++) {
         cout << v[i] << " ";
     }
     cout << endl;

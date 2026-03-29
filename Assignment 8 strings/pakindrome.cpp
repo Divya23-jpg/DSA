@@ -7,6 +7,7 @@ true
 
 #include<iostream>
 #include<string>
+#include<cctype>
 #include<algorithm>
 using namespace std;
 
@@ -20,7 +21,8 @@ int main(){
     int f=1;
     reverse(s.begin(), s.end());
     while(st<end){
-        if(s[st]!=s[end])
+        
+        if(tolower(s[st])!=tolower(s[end]))
         {
             f=0;
             break;
