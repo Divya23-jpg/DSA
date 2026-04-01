@@ -63,30 +63,35 @@ Output: 4
 #include<iostream>
 #include<vector>
 using namespace std;
+int searchInsert(vector<int>& a, int target) {
+    int left=0;
+    int right=a.size()-1;
+    if(target>a[right]){
+        return right+1;
+    }
+    while(left<=right){
+        int mid=left+(right-left)/2;
+        if(a[mid]==target){
+            return mid;
+        }
+        else if(target<a[mid]){
+            right=mid-1;
+        }
+        else{
+            left=mid+1;
+        }
+       
+    }
+    return left;
+    
+}
 int main(){
     vector <int> a={1,3,5,6};
     int target=5;
+    searchInsert(a,target);
      
-    int left=1;
-    int right=a.size()-1;
-    int mid=right/2;
-    while(right<=left){
-        if(a[mid]==target){
-            cout<<mid;
-        }
-        else{
-            if(a[mid]>target){
-                left;
-                // mid=len/2;
-            }
-            else{
-                right;
-                // mid=len/2;
-            }
-
-        }
-    }
-    cout<<right;
-// return 0;
+   
+  
+return 0;
 
 }
