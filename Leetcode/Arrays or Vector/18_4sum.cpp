@@ -7,6 +7,7 @@ using namespace std;
  vector<vector<int>> fourSum(vector<int>& nums, int target) {
         vector<vector<int>> result;
         int n = nums.size();
+        
         if (n < 4) return result;
         sort(nums.begin(), nums.end());
 
@@ -42,5 +43,10 @@ using namespace std;
 int main(){
     vector <int> nums={1,0,-1,0,-2,2};
     int target=0;
+     vector<vector<int>> result;
     fourSum(nums,target);
+    for(int i=0;i<result.size();i++){
+        cout<<result[i];
+    }
+
 }
