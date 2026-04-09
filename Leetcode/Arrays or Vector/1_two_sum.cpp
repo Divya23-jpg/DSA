@@ -10,7 +10,7 @@ output  [0,1]
 #include<vector>
 using namespace std;
 int main(){
-    vector <int> nums={2,7,11,15};
+    vector <int> nums={};
     
     int target=18;
     //optimal 
